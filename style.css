@@ -4,92 +4,119 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* Encabezado */
+/* Header */
 header {
   background-color: #5a0909;
   color: white;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.logo {
-  width: 100px;
-  height: auto;
-}
-
-header h1 {
-  flex: 1;
+  padding: 15px;
   text-align: center;
-  font-size: 1.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
+.logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  list-style-type: none;
 }
-
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
-
 nav ul li a:hover {
-  color: #ff4444;
+  text-decoration: underline;
 }
 
-/* Contenido */
-main {
-  padding: 40px 20px;
-}
-
+/* Secciones */
 section {
-  margin-bottom: 60px;
+  padding: 40px 20px;
+  text-align: center;
 }
-
-h2 {
+section h2 {
+  margin-bottom: 20px;
   color: #5a0909;
-  margin-bottom: 15px;
 }
 
-p {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-/* Inicio con mapa */
-.inicio-section {
+/* Inicio */
+.inicio-contenido {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  align-items: flex-start;
+  margin-top: 20px;
+}
+.inicio-contenido .foto-gym,
+.inicio-contenido .mapa {
+  flex: 1 1 300px;
+}
+.inicio-contenido img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
-.inicio-texto {
-  flex: 1;
-  min-width: 280px;
+/* Servicios */
+#servicios ul {
+  list-style-type: none;
 }
-
-.inicio-mapa {
-  flex: 1;
-  min-width: 320px;
+#servicios ul li {
+  margin: 10px 0;
+  font-size: 18px;
 }
 
 /* Horarios */
-#horarios ul {
-  list-style: none;
-  padding-left: 10px;
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+table th {
+  background-color: #5a0909;
+  color: white;
 }
 
-#horarios ul li {
-  margin-bottom: 8px;
+/* Promociones */
+.promos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.promo-card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  width: 250px;
+}
+.promo-card h3 {
+  color: #5a0909;
+  margin-bottom: 10px;
+}
+
+/* Contacto */
+#contacto a {
+  color: #5a0909;
+  font-weight: bold;
+  text-decoration: none;
+}
+#contacto a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -100,11 +127,20 @@ footer {
   padding: 15px;
 }
 
-footer a {
-  color: #ff4444;
+/* Botón volver arriba */
+.btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #5a0909;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
   text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+}
+.btn-top:hover {
+  background-color: #8c1c1c;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}

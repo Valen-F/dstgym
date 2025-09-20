@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>DstGym - Inicio</title>
+  <title>DstGym - Villa Modelo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Encabezado -->
+  <!-- Header -->
   <header>
     <img src="assets/img/logo.avif" alt="Logo de DstGym" class="logo">
-    <h1>Bienvenidos a DstGym</h1>
+    <h1>DstGym - Villa Modelo</h1>
     <nav>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
@@ -21,74 +21,97 @@
     </nav>
   </header>
 
-  <!-- Contenido principal -->
-  <main>
-    <!-- Sección Inicio -->
-    <section id="inicio" class="inicio-section">
-      <div class="inicio-texto">
-        <h2>Tu gimnasio en la ciudad</h2>
-        <p>
-          En <strong>DstGym</strong> encontrarás el espacio ideal para entrenar, mejorar tu salud y alcanzar tus objetivos.  
-          Contamos con un equipo de profesionales, equipamiento de última generación y un ambiente pensado para motivarte todos los días.  
-        </p>
-        <p>
-          Nuestra misión es ayudarte a lograr un estilo de vida activo y saludable. ¡Vení a conocernos!
-        </p>
+  <!-- Inicio -->
+  <section id="inicio">
+    <h2>Bienvenidos a DstGym</h2>
+    <p>
+      DstGym es un centro de entrenamiento de alto rendimiento con dos pisos totalmente equipados. 
+      En planta baja encontrarás el área de musculación y un patio al aire libre, mientras que en el segundo piso disponemos de máquinas de cardio 
+      —cintas, escaladora, remo, bicicletas— y un espacio dedicado al entrenamiento funcional y levantamiento de pesas. 
+      Además, contamos con clases de spinning (consultar horarios). Somos un gimnasio adaptado para quienes buscan rendimiento, 
+      con especial enfoque en trail runners.
+    </p>
+    <div class="inicio-contenido">
+      <div class="foto-gym">
+        <img src="assets/img/foto-gym.jpg" alt="Foto del gimnasio">
       </div>
-      <div class="inicio-mapa">
-        <h3>Ubicación</h3>
+      <div class="mapa">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.996084543284!2d-58.36414922425864!3d-34.60373445749416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3353178f5edc3%3A0x1234567890abcdef!2sDistrito%20Gym!5e0!3m2!1ses!2sar!4v1690000000000!5m2!1ses!2sar" 
-          width="350" 
-          height="250" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.443295878782!2d-58.36893292425163!3d-34.56505955505759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334c7260f9d33%3A0x5a8c116b69e5e93!2sLimay%201615%2C%20Gerli%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1694896510203"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Sección Servicios -->
-    <section id="servicios">
-      <h2>Servicios</h2>
-      <p>Ofrecemos musculación, crossfit, clases de zumba, funcional y asesoramiento personalizado con nuestros entrenadores.</p>
-    </section>
+  <!-- Servicios -->
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Musculación con equipamiento profesional</li>
+      <li>Cardio (cintas, bicicletas, remo, escaladora)</li>
+      <li>Entrenamiento funcional</li>
+      <li>Levantamiento de pesas</li>
+      <li>Clases de spinning (consultar)</li>
+      <li>Patio al aire libre</li>
+    </ul>
+  </section>
 
-    <!-- Sección Horarios -->
-    <section id="horarios">
-      <h2>Horarios</h2>
-      <ul>
-        <li>Lunes a viernes: 7:00 a 22:00 hs</li>
-        <li>Sábados: 9:00 a 14:00 hs</li>
-        <li>Domingos y feriados: cerrado</li>
-      </ul>
-    </section>
+  <!-- Horarios -->
+  <section id="horarios">
+    <h2>Horarios</h2>
+    <table>
+      <tr>
+        <th>Días</th>
+        <th>Horario</th>
+      </tr>
+      <tr>
+        <td>Lunes a Viernes</td>
+        <td>07:00 - 21:30</td>
+      </tr>
+      <tr>
+        <td>Sábados</td>
+        <td>09:00 - 17:00</td>
+      </tr>
+    </table>
+  </section>
 
-    <!-- Sección Promociones -->
-    <section id="promociones">
-      <h2>Promociones</h2>
-      <p>👉 Promo de bienvenida: 20% de descuento el primer mes.</p>
-      <p>👉 Plan familiar: 2x1 en cuota mensual.</p>
-    </section>
+  <!-- Promociones -->
+  <section id="promociones">
+    <h2>Promociones</h2>
+    <div class="promos">
+      <div class="promo-card">
+        <h3>Promo 1</h3>
+        <p>50% OFF en matrícula para nuevos socios.</p>
+      </div>
+      <div class="promo-card">
+        <h3>Promo 2</h3>
+        <p>2x1 en inscripción para vos y un amigo.</p>
+      </div>
+      <div class="promo-card">
+        <h3>Promo 3</h3>
+        <p>Descuento especial para estudiantes.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Sección Contacto -->
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p><strong>Email:</strong> contacto@dstgym.com.ar</p>
-      <p><strong>Teléfono:</strong> (011) 5555-5555</p>
-      <p><strong>Dirección:</strong> Av. Siempre Viva 123, Villa Modelo</p>
-    </section>
-  </main>
-
-  <!-- Pie de página -->
-  <footer>
-    <p>&copy; 2025 DstGym - www.dstgym.com.ar</p>
-    <p>Seguinos en 
-      <a href="#">Instagram</a> | 
-      <a href="#">Facebook</a>
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Dirección:</strong> Limay 1615, Gerli (Buenos Aires)</p>
+    <p><strong>Instagram:</strong> 
+      <a href="https://www.instagram.com/dstgymvillamodelo/?hl=es" target="_blank">@dstgymvillamodelo</a>
     </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 DstGym - Villa Modelo</p>
   </footer>
+
+  <!-- Botón volver arriba -->
+  <a href="#inicio" class="btn-top">↑</a>
 </body>
 </html>
+
 
