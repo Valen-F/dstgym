@@ -7,6 +7,12 @@
   scroll-behavior: smooth;
 }
 
+/* Fondo general */
+body {
+  background-color: #f0f0f0; /* Gris muy suave */
+  color: #333;
+}
+
 /* Header */
 header {
   background-color: #5a0909;
@@ -41,11 +47,12 @@ nav ul li a:hover {
 
 /* Secciones */
 section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
+  margin: 0 auto;
 }
 section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #5a0909;
 }
 
@@ -68,26 +75,39 @@ section h2 {
 
 /* Servicios */
 #servicios ul {
-  list-style-type: none;
+  list-style-type: disc;
+  padding-left: 40px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 #servicios ul li {
-  margin: 10px 0;
+  margin: 15px 0;
   font-size: 18px;
+  text-align: left;
 }
 
 /* Horarios */
 table {
   margin: 0 auto;
-  border-collapse: collapse;
-  width: 80%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 70%;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 table th, table td {
-  border: 1px solid #ddd;
-  padding: 10px;
+  padding: 15px;
 }
 table th {
   background-color: #5a0909;
   color: white;
+  border-radius: 10px 10px 0 0;
+}
+table td {
+  background-color: #f7f7f7;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* Promociones */
@@ -98,11 +118,11 @@ table th {
   gap: 20px;
 }
 .promo-card {
-  background-color: #f4f4f4;
+  background-color: #fff8dc; /* Amarillo suave */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  width: 250px;
+  width: 300px;
 }
 .promo-card h3 {
   color: #5a0909;
