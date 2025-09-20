@@ -1,4 +1,4 @@
-/* estilo universal */
+/* Estilo universal */
 * {
   margin: 0;
   padding: 0;
@@ -10,37 +10,86 @@
 header {
   background-color: #5a0909;
   color: white;
-  padding: 15px;
-  text-align: center;
-}
-.logo{
-  width: 150px ;
-  height: auto;
-  display: block ;
-  margin-bottom: 10px;
-}
-nav ul {
-  list-style-type: none;
-  margin-top: 10px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 10px;
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+header h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff4444;
 }
 
 /* Contenido */
 main {
-  padding: 20px;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 60px;
 }
 
 h2 {
-  color: #333;
+  color: #5a0909;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Inicio con mapa */
+.inicio-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.inicio-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.inicio-mapa {
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Horarios */
+#horarios ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+#horarios ul li {
+  margin-bottom: 8px;
 }
 
 /* Footer */
@@ -48,6 +97,14 @@ footer {
   background-color: #222;
   color: white;
   text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 15px;
+}
+
+footer a {
+  color: #ff4444;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
