@@ -91,23 +91,72 @@
     </div>
   </section>
 
+  <!-- Calculadora IMC -->
+  <section id="calculadora-imc" class="fade-in">
+    <h2>Calculadora de IMC</h2>
+    <div class="imc-container">
+      <div class="imc-calculator">
+        <div class="form-group">
+          <label for="peso">Peso (kg):</label>
+          <input type="number" id="peso" min="30" max="300" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="altura">Altura (cm):</label>
+          <input type="number" id="altura" min="100" max="250" required>
+        </div>
+        <button id="calcular-imc" class="submit-btn">Calcular IMC</button>
+      </div>
+      <div class="imc-result" style="display: none;">
+        <h3>Tu IMC es: <span id="imc-valor">0</span></h3>
+        <p id="imc-categoria"></p>
+        <div id="imc-recomendacion"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Muro de Logros -->
+  <section id="logros" class="fade-in">
+    <h2>Nuestros Atletas Destacados</h2>
+    <div class="logros-container">
+      <article class="logro-card">
+        <div class="logro-imagen">
+          <div class="imagen-placeholder">Foto del Atleta</div>
+        </div>
+        <div class="logro-contenido">
+          <h3>Nombre del Atleta</h3>
+          <p class="logro-categoria">Categoría: [Ejemplo: Powerlifting]</p>
+          <p class="logro-descripcion">Descripción de los logros y récords alcanzados...</p>
+          <ul class="logro-medallas">
+            <li>🏆 Medalla de Oro - Competencia X</li>
+            <li>🥈 Medalla de Plata - Torneo Y</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Feed de Instagram -->
+  <section id="instagram-feed" class="fade-in">
+    <h2>Síguenos en Instagram</h2>
+    <div class="instagram-container">
+      <iframe class="instagram-media" 
+              src="https://www.instagram.com/dstgymvillamodelo/embed"
+              frameborder="0"
+              scrolling="no"
+              allowtransparency="true">
+      </iframe>
+    </div>
+  </section>
+
   <!-- Contacto -->
   <section id="contacto" class="fade-in">
     <h2>Contacto</h2>
-    <p><strong>Dirección:</strong> Limay 1615, Gerli (Buenos Aires)</p>
-    <p><strong>Instagram:</strong> 
-      <a href="https://www.instagram.com/dstgymvillamodelo/?hl=es" target="_blank">@dstgymvillamodelo</a>
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 DstGym - Villa Modelo</p>
-  </footer>
-
-  <!-- Sección de Contacto -->
-  <section id="contacto" class="fade-in">
-    <h2>Contacto</h2>
+    <div class="contact-info">
+      <p><strong>Dirección:</strong> Limay 1615, Gerli (Buenos Aires)</p>
+      <p><strong>Instagram:</strong> 
+        <a href="https://www.instagram.com/dstgymvillamodelo/?hl=es" target="_blank">@dstgymvillamodelo</a>
+      </p>
+    </div>
     <div class="contact-form-container">
       <form id="contactForm" class="contact-form">
         <div class="form-group">
@@ -139,6 +188,11 @@
       </form>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 DstGym - Villa Modelo</p>
+  </footer>
 
   <!-- Botón volver arriba -->
   <a href="#inicio" class="btn-top" id="btnVolverArriba">↑</a>
