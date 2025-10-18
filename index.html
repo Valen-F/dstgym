@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>DstGym - Villa Modelo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css"> <!-- tu CSS externo -->
 </head>
 <body>
   <!-- Header -->
@@ -22,7 +22,7 @@
   </header>
 
   <!-- Inicio -->
-  <section id="inicio">
+  <section id="inicio" class="fade-in">
     <h2>Bienvenidos a DstGym</h2>
     <p>
       DstGym es un centro de entrenamiento de alto rendimiento con dos pisos totalmente equipados. 
@@ -46,7 +46,7 @@
   </section>
 
   <!-- Servicios -->
-  <section id="servicios">
+  <section id="servicios" class="fade-in">
     <h2>Servicios</h2>
     <ul>
       <li>Musculación con equipamiento profesional</li>
@@ -59,7 +59,7 @@
   </section>
 
   <!-- Horarios -->
-  <section id="horarios">
+  <section id="horarios" class="fade-in">
     <h2>Horarios</h2>
     <table>
       <tr>
@@ -78,7 +78,7 @@
   </section>
 
   <!-- Promociones -->
-  <section id="promociones">
+  <section id="promociones" class="fade-in">
     <h2>Promociones</h2>
     <div class="promos">
       <div class="promo-card">
@@ -91,7 +91,7 @@
   </section>
 
   <!-- Contacto -->
-  <section id="contacto">
+  <section id="contacto" class="fade-in">
     <h2>Contacto</h2>
     <p><strong>Dirección:</strong> Limay 1615, Gerli (Buenos Aires)</p>
     <p><strong>Instagram:</strong> 
@@ -105,7 +105,9 @@
   </footer>
 
   <!-- Botón volver arriba -->
-  <a href="#inicio" class="btn-top">↑</a>
+  <a href="#inicio" class="btn-top" id="btnVolverArriba">↑</a>
+
+  <!-- JS externo -->
+  <script src="js/main.js"></script>
 </body>
 </html>
-
