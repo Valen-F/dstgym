@@ -1,6 +1,6 @@
 // main.js
 
-// Fade-in
+// Fade-in animations
 const fadeElems = document.querySelectorAll('.fade-in');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -9,28 +9,20 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.2 });
+
+// Observe all fade-in elements
 fadeElems.forEach(elem => observer.observe(elem));
 
-// Botón volver arriba
-const btnTop = document.getElementById('btnVolverArriba');
-window.addEventListener('scroll', () => {
-  btnTop.style.display = window.scrollY > 200 ? 'block' : 'none';
-});
-btnTop.addEventListener('click', e => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-// Mostrar el botón al hacer scroll
+// Back to top button functionality
 const btnVolverArriba = document.getElementById('btnVolverArriba');
+
+// Show/hide button based on scroll position
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) {
-    btnVolverArriba.style.display = 'block';
-  } else {
-    btnVolverArriba.style.display = 'none';
-  }
+  btnVolverArriba.style.display = window.scrollY > 200 ? 'block' : 'none';
 });
 
-// Función para volver al inicio
-btnVolverArriba.addEventListener('click', () => {
+// Smooth scroll to top when clicking the button
+btnVolverArriba.addEventListener('click', (e) => {
+  e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
