@@ -7,6 +7,147 @@
   scroll-behavior: smooth;
 }
 
+/* Calculadora IMC */
+.imc-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imc-calculator,
+.imc-result {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+}
+
+.imc-result {
+  text-align: center;
+  color: #fff;
+}
+
+.imc-result h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#imc-valor {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5a0909;
+}
+
+#imc-categoria {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+#imc-recomendacion {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background: rgba(90, 9, 9, 0.2);
+}
+
+/* Muro de Logros */
+.logros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.logro-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logro-card:hover {
+  transform: translateY(-5px);
+}
+
+.logro-imagen {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagen-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(90, 9, 9, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.logro-contenido {
+  padding: 1.5rem;
+  color: white;
+}
+
+.logro-contenido h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.logro-categoria {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.logro-descripcion {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.logro-medallas {
+  list-style: none;
+  padding: 0;
+}
+
+.logro-medallas li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Feed de Instagram */
+.instagram-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.instagram-media {
+  width: 100%;
+  min-width: 326px;
+  height: 600px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin: 0 auto;
+}
+
 /* Formulario de contacto */
 /* Estilos del formulario de contacto */
 .contact-form-container {
