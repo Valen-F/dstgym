@@ -104,6 +104,23 @@ body {
 
 /* Responsive Navigation */
 @media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+
+  .site-header {
+    height: 80px;
+    padding-right: 1rem;
+  }
+
+  .header-container {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
   .nav-toggle-label {
     display: block;
   }
@@ -153,10 +170,11 @@ body {
 
 /* Main Sections */
 section {
-  padding: 50px 20px;
+  padding: 2rem 1rem;
   text-align: center;
-  max-width: 900px;
+  max-width: min(900px, 95%);
   margin: 0 auto;
+  width: 100%;
 }
 
 section h2 {
@@ -582,14 +600,15 @@ table tr:hover td {
   flex-direction: column;
   align-items: center;
   margin: 2rem auto;
-  max-width: 800px;
+  max-width: min(800px, 95%);
   padding: 1rem;
+  width: 100%;
 }
 
 .instagram-media {
   width: 100%;
-  min-width: 326px;
-  height: 600px;
+  min-width: min(326px, 95%);
+  height: min(600px, 90vh);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
