@@ -189,6 +189,7 @@ section h2 {
   animation: powerPulse 2s infinite;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
   background: linear-gradient(45deg, #5a0909, #8c1c1c);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0 10px;
