@@ -8,9 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Configuración del botón volver arriba
   initializeBackToTopButton();
   
-  // Configuración de la calculadora IMC
-  initializeIMCCalculator();
-  
   // Configuración del formulario de contacto
   initializeContactForm();
 });
@@ -29,18 +26,59 @@ function initializeFadeInAnimations() {
   fadeElems.forEach(elem => observer.observe(elem));
 }
 
-// Función para inicializar el botón volver arriba
+// Función para inicializar el botón volver arriba y el logo
 function initializeBackToTopButton() {
   const btnVolverArriba = document.getElementById('btnVolverArriba');
+  const logoLink = document.getElementById('logo-link');
   if (!btnVolverArriba) return;
 
+  // Mostrar/ocultar botón según scroll
   window.addEventListener('scroll', () => {
     btnVolverArriba.style.display = window.scrollY > 200 ? 'block' : 'none';
   });
 
+  // Logo: ir al inicio de la página
+  if (logoLink) {
+    logoLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Botón flotante: ir a la siguiente sección
   btnVolverArriba.addEventListener('click', (e) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Obtener todas las secciones
+    const sections = Array.from(document.querySelectorAll('section'));
+    
+    // Encontrar la sección actual
+    const currentPosition = window.scrollY + window.innerHeight / 2;
+    const currentSection = sections.find(section => {
+      const rect = section.getBoundingClientRect();
+      const sectionTop = rect.top + window.scrollY;
+      const sectionBottom = sectionTop + rect.height;
+      return currentPosition >= sectionTop && currentPosition < sectionBottom;
+    });
+    
+    if (currentSection) {
+      // Encontrar la siguiente sección
+      const currentIndex = sections.indexOf(currentSection);
+      const nextSection = sections[currentIndex + 1];
+      
+      if (nextSection) {
+        // Ir a la siguiente sección
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Si es la última sección, volver al inicio
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    } else {
+      // Si no se encuentra en ninguna sección, ir a la primera
+      if (sections.length > 0) {
+        sections[0].scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   });
 }
 
