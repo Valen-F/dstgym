@@ -138,7 +138,7 @@ function initializeIMCCalculator() {
 
     imcCategoria.textContent = `Categoría: ${categoria}`;
     imcRecomendacion.textContent = recomendacion;
-    imcResultado.style.display = 'block';
+    resultadoDiv.style.display = 'block';
   });
 }
 
@@ -147,7 +147,7 @@ function initializeContactForm() {
   const contactForm = document.getElementById('contactForm');
   if (!contactForm) return;
 
-  contactForm.addEventListener('submit', async (e) => {
+  contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(contactForm);
     const formProps = Object.fromEntries(formData);
