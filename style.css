@@ -538,8 +538,8 @@ table tr:hover td {
   box-shadow: 0 5px 15px rgba(90, 9, 9, 0.3);
 }
 
-/* Back to Top Button */
-.btn-top {
+/* Navigation Button */
+.btn-nav {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -560,9 +560,10 @@ table tr:hover td {
   padding: 0;
   line-height: 1;
   overflow: hidden;
+  z-index: 1000;
 }
 
-.btn-top:hover {
+.btn-nav:hover {
   background-color: #8c1c1c;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
@@ -570,10 +571,8 @@ table tr:hover td {
   opacity: 1;
 }
 
-.btn-top i {
+.btn-nav i {
   position: relative;
-  top: 0;
-  left: 0;
   height: 18px;
   width: 18px;
   display: flex;
@@ -582,8 +581,8 @@ table tr:hover td {
   transition: transform 0.3s ease;
 }
 
-.btn-top:hover i {
-  transform: translateY(-2px);
+.btn-nav:hover i {
+  transform: translateY(2px);
 }
 
 /* Social Media Section */

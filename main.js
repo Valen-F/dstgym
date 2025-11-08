@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Configuración de animaciones fade-in
   initializeFadeInAnimations();
   
-  // Configuración del botón volver arriba
-  initializeBackToTopButton();
+  // Configuración de la navegación del sitio
+  initializeNavigation();
   
   // Configuración del formulario de contacto
   initializeContactForm();
+
+  // Configuración de la calculadora IMC
+  initializeIMCCalculator();
 });
 
 // Función para inicializar las animaciones fade-in
@@ -26,15 +29,18 @@ function initializeFadeInAnimations() {
   fadeElems.forEach(elem => observer.observe(elem));
 }
 
-// Función para inicializar el botón volver arriba y el logo
-function initializeBackToTopButton() {
-  const btnVolverArriba = document.getElementById('btnVolverArriba');
+// Función para inicializar la navegación del sitio
+function initializeNavigation() {
+  const btnNavegar = document.getElementById('btnNavegar');
   const logoLink = document.getElementById('logo-link');
-  if (!btnVolverArriba) return;
+  
+  if (!btnNavegar && !logoLink) return;
 
-  // Mostrar/ocultar botón según scroll
+  // Mostrar/ocultar botón de navegación según scroll
   window.addEventListener('scroll', () => {
-    btnVolverArriba.style.display = window.scrollY > 200 ? 'block' : 'none';
+    if (btnNavegar) {
+      btnNavegar.style.display = window.scrollY > 200 ? 'block' : 'none';
+    }
   });
 
   // Logo: ir al inicio de la página
@@ -45,51 +51,60 @@ function initializeBackToTopButton() {
     });
   }
 
-  // Botón flotante: ir a la siguiente sección
-  btnVolverArriba.addEventListener('click', (e) => {
+  // Inicializar navegación por secciones
+  if (btnNavegar) {
+    initializeSectionNavigation(btnNavegar);
+  }
+}
+
+// Función específica para la navegación entre secciones
+function initializeSectionNavigation(btnNavegar) {
+  btnNavegar.addEventListener('click', (e) => {
     e.preventDefault();
-    
-    // Obtener todas las secciones
-    const sections = Array.from(document.querySelectorAll('section'));
-    
-    // Encontrar la sección actual
-    const currentPosition = window.scrollY + window.innerHeight / 2;
-    const currentSection = sections.find(section => {
-      const rect = section.getBoundingClientRect();
-      const sectionTop = rect.top + window.scrollY;
-      const sectionBottom = sectionTop + rect.height;
-      return currentPosition >= sectionTop && currentPosition < sectionBottom;
-    });
-    
-    if (currentSection) {
-      // Encontrar la siguiente sección
-      const currentIndex = sections.indexOf(currentSection);
-      const nextSection = sections[currentIndex + 1];
-      
-      if (nextSection) {
-        // Ir a la siguiente sección
-        nextSection.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        // Si es la última sección, volver al inicio
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    } else {
-      // Si no se encuentra en ninguna sección, ir a la primera
-      if (sections.length > 0) {
-        sections[0].scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+    navigateToNextSection();
   });
+}
+
+// Función para navegar a la siguiente sección
+function navigateToNextSection() {
+  const sections = Array.from(document.querySelectorAll('section'));
+  const currentPosition = window.scrollY + window.innerHeight / 2;
+  
+  // Encontrar la sección actual
+  const currentSection = sections.find(section => {
+    const rect = section.getBoundingClientRect();
+    const sectionTop = rect.top + window.scrollY;
+    const sectionBottom = sectionTop + rect.height;
+    return currentPosition >= sectionTop && currentPosition < sectionBottom;
+  });
+  
+  if (currentSection) {
+    const currentIndex = sections.indexOf(currentSection);
+    const nextSection = sections[currentIndex + 1];
+    
+    if (nextSection) {
+      // Ir a la siguiente sección
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Si es la última sección, volver al inicio
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  } else {
+    // Si no se encuentra en ninguna sección, ir a la primera
+    if (sections.length > 0) {
+      sections[0].scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
 
 // Función para inicializar la calculadora IMC
 function initializeIMCCalculator() {
-  const calcularIMCBtn = document.getElementById('calcular-imc');
+  const calcularIMCBtn = document.getElementById('calcular-imc-btn');
   if (!calcularIMCBtn) return;
 
   const pesoInput = document.getElementById('peso');
   const alturaInput = document.getElementById('altura');
-  const imcResultado = document.querySelector('.imc-result');
+  const resultadoDiv = document.getElementById('resultado-imc');
   const imcValor = document.getElementById('imc-valor');
   const imcCategoria = document.getElementById('imc-categoria');
   const imcRecomendacion = document.getElementById('imc-recomendacion');

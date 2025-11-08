@@ -76,7 +76,7 @@
       <h3>Encuéntranos</h3>
       <div class="mapa">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.443295878782!2d-58.36893292425163!3d-34.56505955505759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334c7260f9d33%3A0x5a8c116b69e5e93!2sLimay%201615%2C%20Gerli%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1694896510203"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.3608239696946!2d-58.369444!3d-34.564972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f76a5823d3%3A0x791cb3a744959686!2sLimay%201615%2C%20B1824NQY%20Lan%C3%BAs%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1699399287943!5m2!1sen!2sar"
           width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
       </div>
@@ -153,26 +153,13 @@
         <label for="altura">Altura (cm):</label>
         <input type="number" id="altura" step="1" min="100" max="250">
       </div>
-      <button onclick="calcularIMC()" class="submit-btn">Calcular IMC</button>
-      <div id="resultado-imc"></div>
+      <button id="calcular-imc-btn" class="submit-btn">Calcular IMC</button>
+      <div id="resultado-imc">
+        <div id="imc-valor"></div>
+        <div id="imc-categoria"></div>
+        <div id="imc-recomendacion"></div>
+      </div>
     </div>
-  </section>
-  <section id="horarios" class="fade-in">
-    <h2>Horarios</h2>
-    <table>
-      <tr>
-        <th>Días</th>
-        <th>Horario</th>
-      </tr>
-      <tr>
-        <td>Lunes a Viernes</td>
-        <td>07:00 - 21:30</td>
-      </tr>
-      <tr>
-        <td>Sábados</td>
-        <td>09:00 - 17:00</td>
-      </tr>
-    </table>
   </section>
 
   <!-- Contacto -->
@@ -221,8 +208,8 @@
     <p>&copy; 2025 DstGym - Villa Modelo</p>
   </footer>
 
-  <!-- Botón volver arriba -->
-  <a href="#inicio" class="btn-top" id="btnVolverArriba"><i class="fas fa-chevron-down"></i></a>
+  <!-- Botón de navegación -->
+  <a href="#" class="btn-nav" id="btnNavegar"><i class="fas fa-chevron-down"></i></a>
 
   <!-- Scripts -->
   <script src="main.js"></script>
