@@ -578,12 +578,11 @@ table tr:hover td {
 }
 
 .btn-nav i {
-  position: relative;
-  height: 18px;
-  width: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   transition: transform 0.3s ease;
 }
 
